@@ -1,0 +1,33 @@
+<div class="form-container">
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <h2 class="form-header"> Login </h2>
+    <label for="email">
+        <input formControlName="email"  id="email"  placeholder="email" type="email"  />
+        <div class="errors-massage">
+            <span *ngIf="loginForm.controls['email'].errors?.['required']">Please enter username</span>
+            <span *ngIf="loginForm.controls['email'].errors?.['email']">Please writen in email format</span>
+        </div>
+      
+    </label>
+
+    <label for="password">
+        <input formControlName="password" id ="password" placeholder ="password" type="password" />
+        <div class="errors-massage">
+            <span *ngIf="loginForm.controls['password'].errors?.['required']">Please enter password</span>
+            <span *ngIf="loginForm.controls['password'].errors?.['minlength']">Password should contain 6 characters </span>
+        </div>
+    </label>
+    
+    <button class ="login-btn" name="submit" type="submit" (click)="getIMDBData()" [disabled]="!loginForm.valid" (click)="getIMDBData()">Login</button>
+    </form>
+    <a class = "routerLink-to-register"routerLink="/register">Register</a>
+</div>
+
+<p>Form Status: {{ loginForm.status }}</p>
+<div class="container text-center" style="margin-top:100px;">
+
+    <button type="button" class="btn btn-warning" >Get Data</button>
+  
+  </div>
+<!-- ngClass="{'email':loginForm.controls['email'].errors?.["required"],'email2':loginForm.controls['email'].errors?.["email"]}" -->

@@ -1,0 +1,67 @@
+.register-form{
+    padding: 10px 20px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap; 
+    box-shadow: 0 0 2em hsl(231deg 62% 99%);
+}
+.form-header{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 33px;
+}
+.register-form input{
+    width: 300px;
+    margin-bottom: 15px;
+    background-color: rgba(239, 240, 241, 0.959);
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.register-form input:focus,.register-form input:hover{
+    background-color: black;
+    color: #ffff;
+    border-color: transparent;
+ 
+
+}
+.register-form input[placeholder]{
+    text-align: center;
+    text-transform: capitalize;
+    padding:10px
+
+}
+.register-btn{
+    width: 70px;
+    background-color: rgba(0, 162, 255, 0.89);
+    color: #ffff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 14px;
+    
+}
+.register-btn:hover{
+   background-color: #000;
+    color: #ffffff;
+}
+.routerLink-to-login{
+    color: rgba(0, 162, 255, 0.89);
+    padding: 5px 20px;
+    font-size: 14px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.routerLink-to-login:hover{
+    color: #000;
+}
+.errors-massage{
+    color: red;
+    padding: 5px;
+    margin-bottom: 10px;
+}

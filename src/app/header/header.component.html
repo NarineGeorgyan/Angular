@@ -1,0 +1,10 @@
+<header class = "header">
+    <h1>Angular Homework</h1>
+    <nav class = "navigation">
+        <ul class= "navigation-list">
+            <li *ngFor='let page of pageList' class="navigation-list-item" >
+                <a routerLink="{{page.id}}"> {{page.name}} </a>
+            </li>
+        </ul>
+    </nav>
+</header>
